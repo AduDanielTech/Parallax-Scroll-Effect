@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Jungle</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text">
+            <span>It's time for a new </span>
+            <br>
+            Adventure
+        </h2>
+        <img src="./images/bird1.png" alt="bird1" id="bird1">
+        <img src="./images/bird2.png" alt="bird2" id="bird2">
+        <img src="./images/forest.png" alt="forest" id="forest">
+        <a href="#" id="btn">
+            Explore
+        </a>
+        <img src="./images/rocks.png" alt="rocks" id="rocks">
+        <img src="./images/water.png" alt="water"id="water">
+
+    </section>
+    <div class="sec">
+        <h2>Scrolling Effects</h2>
+        <h3>Source Code</h3>
+        <p><a href="https://youtu.be/mgk_2d4lhm8"><i class="fab fa-github"></i></a></p>
+        <h3>Video tutorial</h3>
+        <p><a href="https://youtu.be/mgk_2d4lhm8"><i class="fab fa-youtube"></i></a></p>
+    </div>  
+    <script>
+        let text = document.getElementById('text')
+        let bird1 = document.getElementById('bird1')
+        let bird2 = document.getElementById('bird2')
+        let forest = document.getElementById('forest')
+        let rocks = document.getElementById('rocks')
+        let water = document.getElementById('water')
+        let btn = document.getElementById('btn')
+        let header = document.getElementById('header')
+
+        window.addEventListener ('scroll', () => {
+            let value = window.scrollY
+            text.style.top =50 + value * -0.5 + '%';
+            bird1.style.top =  value * -1.5 + '%';
+            bird1.style.left = value * 10 + 'px'
+            bird2.style.top =  value * -1.5 + '%';
+            bird2.style.left = value * -10 + 'px'
+            btn.style.marginTop = value * 1.5 + 'px'
+            rocks.style.top = value * 0.12 + 'px'
+            forest.style.top = value  *  0.25 + 'px'
+            header.style.top = value  *  0.5 + 'px'
+            
+        })
+    </script>
+</body>
+</html>
