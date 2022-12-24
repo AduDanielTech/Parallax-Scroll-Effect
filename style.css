@@ -87,7 +87,7 @@ section #text{
     text-align: center;
     line-height: 0.55em;
     font-family: 'Rancho', cursive;
-    transform: translateY(-50px);
+    transform: translateY(-90px);
 
 
 }
@@ -124,13 +124,20 @@ section #text span{
     font-size: 1.5em;
     color: #ffffff;
 }
+.sec > div {
+    display: flex;
+}
+.sec > div> div{
+    margin-right: 2em;
+}
 /* Change the color of the icon */
 .fa-youtube {
     color: red;
   }
   
   /* Increase the size of the icon */
-  .fa-youtube {
+  .fa-youtube,
+  .fa-github {
     font-size: 36px;
   }
   
